@@ -7,10 +7,9 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.stream.Collectors;
 
 public class TheaterBooking {
@@ -77,8 +76,8 @@ public class TheaterBooking {
 	}
 
 	public static void main(String... args) {
-		Map<Integer, List<Integer>> layoutMap = new ConcurrentHashMap<>();
-		List<Client> clientList = new CopyOnWriteArrayList<>();
+		Map<Integer, List<Integer>> layoutMap = new HashMap<>();
+		List<Client> clientList = new ArrayList<>();
 
 		try (BufferedReader reader = Files.newBufferedReader(Paths.get(new File("src\\input.txt").getPath()))) {
 			String line;
@@ -100,8 +99,7 @@ public class TheaterBooking {
 
 				}
 			}
-
-
+			
 			List<ClientBookingResponse> bookingResp = seatAssignment(layoutMap, clientList);
 			
 			bookingResp.stream().forEach(System.out::println);
