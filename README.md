@@ -3,8 +3,6 @@ Code for Barclays Test
 
 ### What you'll need
 - Eclipse
-- Gradle (decent installation guide: http://codetutr.com/2013/03/23/how-to-install-gradle/) 
-- Gradle plugin for Eclipse (its called *Gradle Integration for Eclipse*)
 - Git: https://git-scm.
 
 
