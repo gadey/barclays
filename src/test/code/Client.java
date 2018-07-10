@@ -1,4 +1,4 @@
-package src.test;
+package test.code;
 
 public class Client {
 	
